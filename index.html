@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Notes App</h1>
+            <div class="controls">
+                <button class="btn add-btn">+ Add Note</button>
+                <div class="text-controls">
+                    <div class="font-control">
+                        <label>Font:</label>
+                        <select id="fontSelector" class="font-selector">
+                            <option value="Kalam">Kalam</option>
+                            <option value="Playfair Display">Playfair Display</option>
+                            <option value="Roboto">Roboto</option>
+                        </select>
+                    </div>
+                    <div class="font-size-control">
+                        <label>Size:</label>
+                        <select id="fontSizeSelector" class="font-size-selector">
+                            <option value="12">12px</option>
+                            <option value="14">14px</option>
+                            <option value="16" selected>16px</option>
+                            <option value="18">18px</option>
+                            <option value="20">20px</option>
+                            <option value="24">24px</option>
+                        </select>
+                    </div>
+                    <div class="format-controls">
+                        <button class="format-btn" data-format="bold" title="Bold">
+                            <i class="fas fa-bold"></i>
+                        </button>
+                        <button class="format-btn" data-format="italic" title="Italic">
+                            <i class="fas fa-italic"></i>
+                        </button>
+                        <button class="format-btn" data-format="underline" title="Underline">
+                            <i class="fas fa-underline"></i>
+                        </button>
+                        <button class="format-btn" data-format="strikethrough" title="Strikethrough">
+                            <i class="fas fa-strikethrough"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="color-presets">
+                    <label>Theme:</label>
+                    <div class="color-buttons">
+                        <button class="color-preset" data-color="#fff7b1" style="background-color: #fff7b1;" title="ISRO Theme"></button>
+                        <button class="color-preset" data-color="#b1e3ff" style="background-color: #b1e3ff;" title="IIT Theme"></button>
+                        <button class="color-preset" data-color="#ffd1b1" style="background-color: #ffd1b1;" title="DRDO Theme"></button>
+                        <button class="color-preset" data-color="#d1ffb1" style="background-color: #d1ffb1;" title="BARC Theme"></button>
+                    </div>
+                    <input type="color" id="noteColor" value="#fff7b1" title="Custom Color">
+                </div>
+            </div>
+        </header>
+        <div class="notes-container"></div>
+    </div>
+    <div class="image-preview">
+        <div class="image-preview-content">
+            <img src="" alt="Preview">
+            <div class="image-preview-actions">
+                <button class="btn confirm-btn">Confirm</button>
+                <button class="btn cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
